@@ -1,0 +1,69 @@
+﻿@model IEnumerable<Mentorproject.Mentor_TakenSessionDetails>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="font-family: Cooper; color:black">MENTOR TAKEN SESSIONS</h2>
+
+<p style="color:black">
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table"style=" background-repeat: no-repeat; background-size: cover; color: whitesmoke; background-image: url('../../IMGS/blackred.jpg');">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DomainId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AttendeesCount)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SessionId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SessionDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SessionStart)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SessionEnd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SessionAmount)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DomainId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AttendeesCount)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SessionId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SessionDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SessionStart)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SessionEnd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SessionAmount)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MentorId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MentorId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MentorId })
+        </td>
+    </tr>
+}
+
+</table>

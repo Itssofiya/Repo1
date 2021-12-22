@@ -1,0 +1,72 @@
+﻿@model Mentorproject.MentorRegistration
+
+@{
+    ViewBag.Title = "LOGIN ";
+}
+
+
+
+
+<h2 style="padding-right:600px;font-family:fantasy;">LOGIN/SIGN IN</h2>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-5" style="background-size: cover; height: 400px; background-image: url('../../IMGS/cartoonstudent.jpg');padding-bottom: 60px">
+
+      
+            
+            
+        </div>
+        <div class="col-lg-7" style=" background-image: url('../../IMGS/blackmagic.jpg'); color: whitesmoke; padding-right: 60px; background-repeat: no-repeat; background-size: cover ">
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-horizontal" style="padding-left:250px;">
+
+                    <h4 style="font-family:fantasy;padding-top:34%">MentorRegistration</h4>
+                </div>
+                <div style="padding-right:30px">
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group;" style="font-family:Rockwell;padding-top:30px">
+                        @Html.LabelFor(model => model.Username, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10" style="padding-right:50px">
+                            @Html.EditorFor(model => model.Username, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Username, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group;" style="font-family:Rockwell;padding-top:80px">
+                        @Html.LabelFor(model => model.Passsword, htmlAttributes: new { @class = "control-label col-md-2" })
+                        <div class="col-md-10" style="padding-right:50px;padding-bottom:40px">
+                            @Html.EditorFor(model => model.Passsword, new { htmlAttributes = new { @class = "form-control" } })
+                            @Html.ValidationMessageFor(model => model.Passsword, "", new { @class = "text-danger" })
+                        </div>
+                    </div><br /><br />
+
+
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10" style="padding-left:60px;padding-bottom:20px">
+                            <button type="submit" value="Create" class="btn btn-info" >Login</button>
+                        </div>
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+</div>
+
+
+<div>
+    <strong class="btn btn-dark"style="color:black">
+        @Html.ActionLink("Back to List", "Index")
+    </strong>
+</div>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+<div>
+
+</div>
+
+

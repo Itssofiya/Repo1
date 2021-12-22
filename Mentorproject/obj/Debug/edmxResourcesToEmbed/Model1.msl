@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="MentorInformationDBaseModelStoreContainer" CdmEntityContainer="MentorInformationDBaseEntities1">
+    <EntitySetMapping Name="Mentor_RejectedSessionDetailss">
+      <EntityTypeMapping TypeName="MentorInformationDBaseModel.Mentor_RejectedSessionDetailss">
+        <MappingFragment StoreEntitySet="Mentor_RejectedSessionDetailss">
+          <ScalarProperty Name="MentorId" ColumnName="MentorId" />
+          <ScalarProperty Name="DomainId" ColumnName="DomainId" />
+          <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+          <ScalarProperty Name="SessionDate" ColumnName="SessionDate" />
+          <ScalarProperty Name="RejectReason" ColumnName="RejectReason" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Mentor_TakenSessionDetails">
+      <EntityTypeMapping TypeName="MentorInformationDBaseModel.Mentor_TakenSessionDetails">
+        <MappingFragment StoreEntitySet="Mentor_TakenSessionDetails">
+          <ScalarProperty Name="MentorId" ColumnName="MentorId" />
+          <ScalarProperty Name="DomainId" ColumnName="DomainId" />
+          <ScalarProperty Name="AttendeesCount" ColumnName="AttendeesCount" />
+          <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+          <ScalarProperty Name="SessionDate" ColumnName="SessionDate" />
+          <ScalarProperty Name="SessionStart" ColumnName="SessionStart" />
+          <ScalarProperty Name="SessionEnd" ColumnName="SessionEnd" />
+          <ScalarProperty Name="SessionAmount" ColumnName="SessionAmount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MentorDomains">
+      <EntityTypeMapping TypeName="MentorInformationDBaseModel.MentorDomain">
+        <MappingFragment StoreEntitySet="MentorDomains">
+          <ScalarProperty Name="DomainId" ColumnName="DomainId" />
+          <ScalarProperty Name="DomainName" ColumnName="DomainName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MentorProfiles">
+      <EntityTypeMapping TypeName="MentorInformationDBaseModel.MentorProfile">
+        <MappingFragment StoreEntitySet="MentorProfile">
+          <ScalarProperty Name="MentorId" ColumnName="MentorId" />
+          <ScalarProperty Name="DomainId" ColumnName="DomainId" />
+          <ScalarProperty Name="IndustryExperience" ColumnName="IndustryExperience" />
+          <ScalarProperty Name="MentoringExperience" ColumnName="MentoringExperience" />
+          <ScalarProperty Name="Skills" ColumnName="Skills" />
+          <ScalarProperty Name="AvailableFrom" ColumnName="AvailableFrom" />
+          <ScalarProperty Name="AvailableTo" ColumnName="AvailableTo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MentorRegistrations">
+      <EntityTypeMapping TypeName="MentorInformationDBaseModel.MentorRegistration">
+        <MappingFragment StoreEntitySet="MentorRegistration">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Passsword" ColumnName="Passsword" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+          <ScalarProperty Name="Address" ColumnName="Address" />
+          <ScalarProperty Name="State" ColumnName="State" />
+          <ScalarProperty Name="country" ColumnName="country" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

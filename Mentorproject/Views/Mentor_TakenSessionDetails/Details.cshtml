@@ -1,0 +1,74 @@
+﻿@model Mentorproject.Mentor_TakenSessionDetails
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 style="font-family:Cooper;color:black">Details</h2>
+
+<div style="background-image: url('../../IMGS/blackred.jpg');color:black;font-family:Century;">
+    <h4>Mentor_TakenSessionDetails</h4>
+   
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DomainId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DomainId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AttendeesCount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AttendeesCount)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SessionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SessionId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SessionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SessionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SessionStart)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SessionStart)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SessionEnd)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SessionEnd)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SessionAmount)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SessionAmount)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MentorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

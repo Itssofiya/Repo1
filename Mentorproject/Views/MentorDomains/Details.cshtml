@@ -1,0 +1,25 @@
+﻿@model Mentorproject.MentorDomain
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 style="font-family: Cooper;color:black">Details</h2>
+
+<div style="color: black ;background-image: url('../../IMGS/blackred.jpg');">
+    <h4 style="font-family:Century">MentorDomain</h4>
+      <dl class="dl-horizontal"style="font-size:15px">
+        <dt>
+            @Html.DisplayNameFor(model => model.DomainName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DomainName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.DomainId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

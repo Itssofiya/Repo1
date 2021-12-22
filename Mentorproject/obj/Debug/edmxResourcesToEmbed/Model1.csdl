@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="MentorInformationDBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Mentor_RejectedSessionDetailss">
+    <Key>
+      <PropertyRef Name="MentorId" />
+    </Key>
+    <Property Name="MentorId" Type="Int32" Nullable="false" />
+    <Property Name="DomainId" Type="Int32" Nullable="false" />
+    <Property Name="SessionId" Type="Int32" Nullable="false" />
+    <Property Name="SessionDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="RejectReason" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Mentor_TakenSessionDetails">
+    <Key>
+      <PropertyRef Name="MentorId" />
+    </Key>
+    <Property Name="MentorId" Type="Int32" Nullable="false" />
+    <Property Name="DomainId" Type="Int32" Nullable="false" />
+    <Property Name="AttendeesCount" Type="Int32" Nullable="false" />
+    <Property Name="SessionId" Type="Int32" Nullable="false" />
+    <Property Name="SessionDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="SessionStart" Type="Int32" Nullable="false" />
+    <Property Name="SessionEnd" Type="Int32" Nullable="false" />
+    <Property Name="SessionAmount" Type="Double" Nullable="false" />
+  </EntityType>
+  <EntityType Name="MentorDomain">
+    <Key>
+      <PropertyRef Name="DomainId" />
+    </Key>
+    <Property Name="DomainId" Type="Int32" Nullable="false" />
+    <Property Name="DomainName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="MentorProfile">
+    <Key>
+      <PropertyRef Name="MentorId" />
+    </Key>
+    <Property Name="MentorId" Type="Int32" Nullable="false" />
+    <Property Name="DomainId" Type="Int32" />
+    <Property Name="IndustryExperience" Type="Int32" />
+    <Property Name="MentoringExperience" Type="Int32" />
+    <Property Name="Skills" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="AvailableFrom" Type="DateTime" Precision="3" />
+    <Property Name="AvailableTo" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="MentorRegistration">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Passsword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Mobile" Type="Int64" />
+    <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="State" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="MentorInformationDBaseEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Mentor_RejectedSessionDetailss" EntityType="Self.Mentor_RejectedSessionDetailss" />
+    <EntitySet Name="Mentor_TakenSessionDetails" EntityType="Self.Mentor_TakenSessionDetails" />
+    <EntitySet Name="MentorDomains" EntityType="Self.MentorDomain" />
+    <EntitySet Name="MentorProfiles" EntityType="Self.MentorProfile" />
+    <EntitySet Name="MentorRegistrations" EntityType="Self.MentorRegistration" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,50 @@
+﻿@model Mentorproject.Mentor_RejectedSessionDetailss
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Mentor_RejectedSessionDetailss</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DomainId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DomainId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SessionId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SessionId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SessionDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SessionDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RejectReason)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RejectReason)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MentorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MentorInformationDBaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Mentor_RejectedSessionDetailss">
+          <Key>
+            <PropertyRef Name="MentorId" />
+          </Key>
+          <Property Name="MentorId" Type="int" Nullable="false" />
+          <Property Name="DomainId" Type="int" Nullable="false" />
+          <Property Name="SessionId" Type="int" Nullable="false" />
+          <Property Name="SessionDate" Type="datetime" Nullable="false" />
+          <Property Name="RejectReason" Type="varchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Mentor_TakenSessionDetails">
+          <Key>
+            <PropertyRef Name="MentorId" />
+          </Key>
+          <Property Name="MentorId" Type="int" Nullable="false" />
+          <Property Name="DomainId" Type="int" Nullable="false" />
+          <Property Name="AttendeesCount" Type="int" Nullable="false" />
+          <Property Name="SessionId" Type="int" Nullable="false" />
+          <Property Name="SessionDate" Type="datetime" Nullable="false" />
+          <Property Name="SessionStart" Type="int" Nullable="false" />
+          <Property Name="SessionEnd" Type="int" Nullable="false" />
+          <Property Name="SessionAmount" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MentorDomains">
+          <Key>
+            <PropertyRef Name="DomainId" />
+          </Key>
+          <Property Name="DomainId" Type="int" Nullable="false" />
+          <Property Name="DomainName" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="MentorProfile">
+          <Key>
+            <PropertyRef Name="MentorId" />
+          </Key>
+          <Property Name="MentorId" Type="int" Nullable="false" />
+          <Property Name="DomainId" Type="int" />
+          <Property Name="IndustryExperience" Type="int" />
+          <Property Name="MentoringExperience" Type="int" />
+          <Property Name="Skills" Type="varchar" MaxLength="100" />
+          <Property Name="AvailableFrom" Type="datetime" />
+          <Property Name="AvailableTo" Type="datetime" />
+        </EntityType>
+        <EntityType Name="MentorRegistration">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="100" />
+          <Property Name="Passsword" Type="varchar" MaxLength="100" />
+          <Property Name="Mobile" Type="bigint" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="Address" Type="varchar" MaxLength="100" />
+          <Property Name="State" Type="varchar" MaxLength="100" />
+          <Property Name="country" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityContainer Name="MentorInformationDBaseModelStoreContainer">
+          <EntitySet Name="Mentor_RejectedSessionDetailss" EntityType="Self.Mentor_RejectedSessionDetailss" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Mentor_TakenSessionDetails" EntityType="Self.Mentor_TakenSessionDetails" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MentorDomains" EntityType="Self.MentorDomains" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MentorProfile" EntityType="Self.MentorProfile" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="MentorRegistration" EntityType="Self.MentorRegistration" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MentorInformationDBaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Mentor_RejectedSessionDetailss">
+          <Key>
+            <PropertyRef Name="MentorId" />
+          </Key>
+          <Property Name="MentorId" Type="Int32" Nullable="false" />
+          <Property Name="DomainId" Type="Int32" Nullable="false" />
+          <Property Name="SessionId" Type="Int32" Nullable="false" />
+          <Property Name="SessionDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="RejectReason" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Mentor_TakenSessionDetails">
+          <Key>
+            <PropertyRef Name="MentorId" />
+          </Key>
+          <Property Name="MentorId" Type="Int32" Nullable="false" />
+          <Property Name="DomainId" Type="Int32" Nullable="false" />
+          <Property Name="AttendeesCount" Type="Int32" Nullable="false" />
+          <Property Name="SessionId" Type="Int32" Nullable="false" />
+          <Property Name="SessionDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="SessionStart" Type="Int32" Nullable="false" />
+          <Property Name="SessionEnd" Type="Int32" Nullable="false" />
+          <Property Name="SessionAmount" Type="Double" Nullable="false" />
+        </EntityType>
+        <EntityType Name="MentorDomain">
+          <Key>
+            <PropertyRef Name="DomainId" />
+          </Key>
+          <Property Name="DomainId" Type="Int32" Nullable="false" />
+          <Property Name="DomainName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="MentorProfile">
+          <Key>
+            <PropertyRef Name="MentorId" />
+          </Key>
+          <Property Name="MentorId" Type="Int32" Nullable="false" />
+          <Property Name="DomainId" Type="Int32" />
+          <Property Name="IndustryExperience" Type="Int32" />
+          <Property Name="MentoringExperience" Type="Int32" />
+          <Property Name="Skills" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="AvailableFrom" Type="DateTime" Precision="3" />
+          <Property Name="AvailableTo" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="MentorRegistration">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="Username" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Passsword" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile" Type="Int64" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="country" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="MentorInformationDBaseEntities1" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Mentor_RejectedSessionDetailss" EntityType="Self.Mentor_RejectedSessionDetailss" />
+          <EntitySet Name="Mentor_TakenSessionDetails" EntityType="Self.Mentor_TakenSessionDetails" />
+          <EntitySet Name="MentorDomains" EntityType="Self.MentorDomain" />
+          <EntitySet Name="MentorProfiles" EntityType="Self.MentorProfile" />
+          <EntitySet Name="MentorRegistrations" EntityType="Self.MentorRegistration" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MentorInformationDBaseModelStoreContainer" CdmEntityContainer="MentorInformationDBaseEntities1">
+          <EntitySetMapping Name="Mentor_RejectedSessionDetailss">
+            <EntityTypeMapping TypeName="MentorInformationDBaseModel.Mentor_RejectedSessionDetailss">
+              <MappingFragment StoreEntitySet="Mentor_RejectedSessionDetailss">
+                <ScalarProperty Name="MentorId" ColumnName="MentorId" />
+                <ScalarProperty Name="DomainId" ColumnName="DomainId" />
+                <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+                <ScalarProperty Name="SessionDate" ColumnName="SessionDate" />
+                <ScalarProperty Name="RejectReason" ColumnName="RejectReason" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Mentor_TakenSessionDetails">
+            <EntityTypeMapping TypeName="MentorInformationDBaseModel.Mentor_TakenSessionDetails">
+              <MappingFragment StoreEntitySet="Mentor_TakenSessionDetails">
+                <ScalarProperty Name="MentorId" ColumnName="MentorId" />
+                <ScalarProperty Name="DomainId" ColumnName="DomainId" />
+                <ScalarProperty Name="AttendeesCount" ColumnName="AttendeesCount" />
+                <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+                <ScalarProperty Name="SessionDate" ColumnName="SessionDate" />
+                <ScalarProperty Name="SessionStart" ColumnName="SessionStart" />
+                <ScalarProperty Name="SessionEnd" ColumnName="SessionEnd" />
+                <ScalarProperty Name="SessionAmount" ColumnName="SessionAmount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MentorDomains">
+            <EntityTypeMapping TypeName="MentorInformationDBaseModel.MentorDomain">
+              <MappingFragment StoreEntitySet="MentorDomains">
+                <ScalarProperty Name="DomainId" ColumnName="DomainId" />
+                <ScalarProperty Name="DomainName" ColumnName="DomainName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MentorProfiles">
+            <EntityTypeMapping TypeName="MentorInformationDBaseModel.MentorProfile">
+              <MappingFragment StoreEntitySet="MentorProfile">
+                <ScalarProperty Name="MentorId" ColumnName="MentorId" />
+                <ScalarProperty Name="DomainId" ColumnName="DomainId" />
+                <ScalarProperty Name="IndustryExperience" ColumnName="IndustryExperience" />
+                <ScalarProperty Name="MentoringExperience" ColumnName="MentoringExperience" />
+                <ScalarProperty Name="Skills" ColumnName="Skills" />
+                <ScalarProperty Name="AvailableFrom" ColumnName="AvailableFrom" />
+                <ScalarProperty Name="AvailableTo" ColumnName="AvailableTo" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="MentorRegistrations">
+            <EntityTypeMapping TypeName="MentorInformationDBaseModel.MentorRegistration">
+              <MappingFragment StoreEntitySet="MentorRegistration">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Passsword" ColumnName="Passsword" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="country" ColumnName="country" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

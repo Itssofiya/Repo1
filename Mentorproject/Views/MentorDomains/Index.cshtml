@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Mentorproject.MentorDomain>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="font-family: Cooper;color:black">MENTOR DOMAINS</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table"style="background-repeat: no-repeat; background-size: cover; color: whitesmoke; background-image: url('../../IMGS/blackred.jpg'); ">
+    <tr>
+        <th style="font-family:Century">
+            @Html.DisplayNameFor(model => model.DomainName)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DomainName)
+        </td>
+        <td style="color:whitesmoke;">
+            @Html.ActionLink("Edit", "Edit", new { id=item.DomainId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.DomainId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.DomainId })
+        </td>
+    </tr>
+}
+
+</table>

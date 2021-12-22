@@ -1,0 +1,66 @@
+﻿@model Mentorproject.MentorProfile
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2 style="font-family: Cooper;color:black">Details</h2>
+
+<div style="font-family: Century; color:black; background-image: url('../../IMGS/blackred.jpg');font-size:20px">
+    <h4>MentorProfile</h4>
+    <hr />
+    <dl class="dl-horizontal"style="text-shadow:2px">
+        <dt>
+            @Html.DisplayNameFor(model => model.DomainId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DomainId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IndustryExperience)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IndustryExperience)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MentoringExperience)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MentoringExperience)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Skills)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Skills)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AvailableFrom)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AvailableFrom)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AvailableTo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AvailableTo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MentorId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

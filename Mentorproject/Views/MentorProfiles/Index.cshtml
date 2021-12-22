@@ -1,0 +1,66 @@
+﻿@model IEnumerable<Mentorproject.MentorProfile>
+
+@{
+    ViewBag.Title = "Index";
+}
+<div>
+
+    <h2 style="font-family:Cooper;color:black;padding-top:20px;">MENTOR PROFILE</h2>
+    
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table" style="background-image: url('../../IMGS/blackred.jpg'); color: whitesmoke; background-repeat: no-repeat; background-size: cover;font-size:15px  ">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DomainId)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IndustryExperience)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MentoringExperience)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Skills)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AvailableFrom)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AvailableTo)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DomainId)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.IndustryExperience)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MentoringExperience)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Skills)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AvailableFrom)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AvailableTo)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.MentorId }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.MentorId }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.MentorId })
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>
