@@ -7,16 +7,16 @@
 
 
 
-<h2 style="padding-right:600px;font-family:fantasy;">LOGIN/SIGN IN</h2>
+<h2 style="padding-right:600px;font-family:fantasy;color:whitesmoke">LOGIN/SIGN IN</h2>
 <div class="container">
     <div class="row">
-        <div class="col-lg-5" style="background-size: cover; height: 400px; background-image: url('../../IMGS/cartoonstudent.jpg');padding-bottom: 60px">
+        <div class="col-lg-5" style="background-size: cover; height: 400px;padding-top: 60px">
 
-      
-            
-            
+
+
+
         </div>
-        <div class="col-lg-7" style=" background-image: url('../../IMGS/blackmagic.jpg'); color: whitesmoke; padding-right: 60px; background-repeat: no-repeat; background-size: cover ">
+        <div class="col-lg-7" style=" background-image: url('../../IMGS/blackred.jpg'); color: whitesmoke; padding-right: 60px; background-repeat: no-repeat; background-size: cover ">
             @using (Html.BeginForm())
             {
                 @Html.AntiForgeryToken()
@@ -46,7 +46,7 @@
 
                     <div class="form-group">
                         <div class="col-md-offset-2 col-md-10" style="padding-left:60px;padding-bottom:20px">
-                            <button type="submit" value="Create" class="btn btn-info" >Login</button>
+                            <button type="submit" value="Create" class="btn btn-outline-dark">Login</button>
                         </div>
                     </div>
                 </div>
@@ -58,9 +58,11 @@
 
 
 <div>
-    <strong class="btn btn-dark"style="color:black">
-        @Html.ActionLink("Back to List", "Index")
-    </strong>
+    
+        <strong>
+            @Html.ActionLink("Back to List", "Index")
+        </strong>
+    
 </div>
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")

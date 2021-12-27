@@ -190,33 +190,26 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="IMGS\abstractimage.jpg" />
     <Content Include="IMGS\black grunge.jpg" />
-    <Content Include="IMGS\black.jpg" />
     <Content Include="IMGS\blackblocks.jpg" />
     <Content Include="IMGS\blackborad.jpg" />
     <Content Include="IMGS\blackmagic.jpg" />
     <Content Include="IMGS\blackpattern.jpg" />
-    <Content Include="IMGS\blackred.jpg" />
-    <Content Include="IMGS\blacktable.jpg" />
-    <Content Include="IMGS\blacktriangle.jpg" />
-    <Content Include="IMGS\cartoonstudent.jpg" />
-    <Content Include="IMGS\classborad.jpg" />
-    <Content Include="IMGS\classlight.jpg" />
-    <Content Include="IMGS\classroom.jpg" />
+    <Content Include="IMGS\boardtable.jpg" />
     <Content Include="IMGS\collegementors.jpg" />
+    <Content Include="IMGS\facultygroup.jpg" />
     <Content Include="IMGS\green.jpg" />
+    <Content Include="IMGS\imageofmentor.jpg" />
     <Content Include="IMGS\lapimage.jpg" />
     <Content Include="IMGS\lapphoto.jpg" />
     <Content Include="IMGS\lapsss.jpeg" />
     <Content Include="IMGS\lineblack.jpg" />
     <Content Include="IMGS\mentorreg.jpg" />
-    <Content Include="IMGS\redplain.jpg" />
     <Content Include="IMGS\single student.jpeg" />
     <Content Include="IMGS\studentmentors.jpg" />
     <Content Include="IMGS\students.jpeg" />
     <Content Include="IMGS\studentsupport.jpg" />
-    <Content Include="IMGS\uestion.jpg" />
-    <Content Include="IMGS\zoomperfect.jpg" />
     <Content Include="Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
