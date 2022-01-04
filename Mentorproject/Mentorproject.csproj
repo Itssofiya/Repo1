@@ -196,7 +196,9 @@
     <Content Include="IMGS\blackborad.jpg" />
     <Content Include="IMGS\blackmagic.jpg" />
     <Content Include="IMGS\blackpattern.jpg" />
+    <Content Include="IMGS\blackred.jpg" />
     <Content Include="IMGS\boardtable.jpg" />
+    <Content Include="IMGS\classroom.jpg" />
     <Content Include="IMGS\collegementors.jpg" />
     <Content Include="IMGS\facultygroup.jpg" />
     <Content Include="IMGS\green.jpg" />
